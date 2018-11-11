@@ -26,7 +26,7 @@ app.post('/addtd', (req, res) => {
         todoList.push(val)
 });
 
-todoList = ['blablablab','varias paradas','muito test', 'sei la mano']
+todoList = []
 
 var PORT = 8000
 app.listen(PORT, () => {
