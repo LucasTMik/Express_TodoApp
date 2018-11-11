@@ -1,13 +1,16 @@
-
+//Assim que o documento estiver carregado 
+//Executa a funçao
 $(document).ready(function () {
     reloadList()
     
+    //Adiciona um evento de click no botão de 
+    //adicionar tarefas
     $('#addTodo').click(function () {
         let todoInput = $('#todo')
         let todoVal = {
             todo: todoInput.val()
         }
-
+        
         let fetchOptions = { 
             method: 'POST',
             headers: {
@@ -26,6 +29,8 @@ $(document).ready(function () {
     })
 })
 
+//Destroi li's existentes e recria baseado
+// na lista recebida pelo get feito com o fetch
 function reloadList() {
     fetch('http://localhost:8000/homelist')
     .then(function(req) {
